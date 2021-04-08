@@ -1,27 +1,29 @@
 from edgify_sdk import EdgifySDK
 
-sdk = EdgifySDK('localhost', 50051)
 
-# take a prediction
-prediction = sdk.GetPrediction()
+def example():
+    sdk = EdgifySDK('localhost', 50051)
 
-# Autobuy flag
-if prediction.certain:
-    print("using Autobuy")
+    # take a prediction
+    prediction = sdk.GetPrediction()
 
-print('Uuid: ' + prediction.uuid)
-print('Predictions: ', prediction.predictions)
+    # Autobuy flag
+    if prediction.certain:
+        print("using Autobuy")
 
-# create the ground truth
-label = 'Banana'
-source = 'RegularMenuSelection'
-sdk.CreateGroundTruth(prediction, label, source)
+    print('Uuid: ' + prediction.uuid)
+    print('Predictions: ', prediction.predictions)
 
-# if you need to delete a sample
-sdk.DeleteSample(prediction.uuid)
+    # create the ground truth
+    label = 'Banana'
+    source = 'RegularMenuSelection'
+    sdk.CreateGroundTruth(prediction, label, source)
 
-# inform edgify on transaction start
-sdk.StartCustomerTransaction()
+    # if you need to delete a sample
+    sdk.DeleteSample(prediction.uuid)
 
-# inform edgify on transaction end
-sdk.EndCustomerTransaction()
+    # inform edgify on transaction start
+    sdk.StartCustomerTransaction()
+
+    # inform edgify on transaction end
+    sdk.EndCustomerTransaction()
