@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010edgifypb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10prediction.proto\x12\x06\x65\x64gify\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1e\n\x0ePredictionItem\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\t\"\xc0\x01\n\nPrediction\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64uration\x18\x02 \x01(\r\x12\x14\n\x0cpredicted_at\x18\x03 \x01(\t\x12\x10\n\x08model_id\x18\x04 \x01(\r\x12+\n\x0bpredictions\x18\x05 \x03(\x0b\x32\x16.edgify.PredictionItem\x12\x1c\n\x05image\x18\x06 \x01(\x0b\x32\r.edgify.Image\x12\x0e\n\x06source\x18\x07 \x01(\t\x12\x0f\n\x07\x63\x65rtain\x18\x08 \x01(\x08\"6\n\x05Image\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\x0c\x12\x10\n\x08group_id\x18\x03 \x01(\t\"\x9a\x01\n\x0fModelDeployment\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08model_id\x18\x02 \x01(\r\x12\x12\n\nmodel_path\x18\x03 \x01(\t\x12\x13\n\x0b\x63onfig_path\x18\x04 \x01(\t\x12\x10\n\x08verified\x18\x05 \x01(\x08\x12.\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"T\n\x0bGroundTruth\x12&\n\nprediction\x18\x01 \x01(\x0b\x32\x12.edgify.Prediction\x12\r\n\x05label\x18\x02 \x01(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\"\\\n\x11PredictionRequest\x12\x1c\n\x05image\x18\x01 \x01(\x0b\x32\r.edgify.Image\x12\x19\n\x11withoutPrediction\x18\x02 \x01(\x08\x12\x0e\n\x06source\x18\x03 \x01(\t\"<\n\x12PredictionResponse\x12&\n\nprediction\x18\x01 \x01(\x0b\x32\x12.edgify.Prediction\"O\n\x12GroundTruthRequest\x12)\n\x0cground_truth\x18\x01 \x01(\x0b\x32\x13.edgify.GroundTruth\x12\x0e\n\x06source\x18\x02 \x01(\t\"\x15\n\x13GroundTruthResponse\"\"\n GetCurrentModelDeploymentRequest\"V\n!GetCurrentModelDeploymentResponse\x12\x31\n\x10model_deployment\x18\x01 \x01(\x0b\x32\x17.edgify.ModelDeployment2\x9d\x02\n\rEdgifyService\x12H\n\rGetPrediction\x12\x19.edgify.PredictionRequest\x1a\x1a.edgify.PredictionResponse\"\x00\x12N\n\x11\x43reateGroundTruth\x12\x1a.edgify.GroundTruthRequest\x1a\x1b.edgify.GroundTruthResponse\"\x00\x12r\n\x19GetCurrentModelDeployment\x12(.edgify.GetCurrentModelDeploymentRequest\x1a).edgify.GetCurrentModelDeploymentResponse\"\x00\x42\nZ\x08\x65\x64gifypbb\x06proto3'
+  serialized_pb=b'\n\x10prediction.proto\x12\x06\x65\x64gify\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1e\n\x0ePredictionItem\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\t\"\xc0\x01\n\nPrediction\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x10\n\x08\x64uration\x18\x02 \x01(\r\x12\x14\n\x0cpredicted_at\x18\x03 \x01(\t\x12\x10\n\x08model_id\x18\x04 \x01(\r\x12+\n\x0bpredictions\x18\x05 \x03(\x0b\x32\x16.edgify.PredictionItem\x12\x1c\n\x05image\x18\x06 \x01(\x0b\x32\r.edgify.Image\x12\x0e\n\x06source\x18\x07 \x01(\t\x12\x0f\n\x07\x63\x65rtain\x18\x08 \x01(\x08\"Y\n\x05Image\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\x0c\x12\x10\n\x08group_id\x18\x03 \x01(\t\x12\x11\n\tdevice_id\x18\x04 \x01(\r\x12\x0e\n\x06source\x18\x05 \x01(\t\"\x9a\x01\n\x0fModelDeployment\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08model_id\x18\x02 \x01(\r\x12\x12\n\nmodel_path\x18\x03 \x01(\t\x12\x13\n\x0b\x63onfig_path\x18\x04 \x01(\t\x12\x10\n\x08verified\x18\x05 \x01(\x08\x12.\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"T\n\x0bGroundTruth\x12&\n\nprediction\x18\x01 \x01(\x0b\x32\x12.edgify.Prediction\x12\r\n\x05label\x18\x02 \x01(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\"Y\n\x10LookupTableValue\x12\x17\n\x0ftranslated_name\x18\x01 \x01(\t\x12\x1b\n\x13human_readable_name\x18\x02 \x01(\t\x12\x0f\n\x07\x63omment\x18\x03 \x01(\t\"R\n\x11PredictionRequest\x12\x1c\n\x05image\x18\x01 \x01(\x0b\x32\r.edgify.Image\x12\x19\n\x11withoutPrediction\x18\x02 \x01(\x08J\x04\x08\x03\x10\x04\"<\n\x12PredictionResponse\x12&\n\nprediction\x18\x01 \x01(\x0b\x32\x12.edgify.Prediction\"E\n\x12GroundTruthRequest\x12)\n\x0cground_truth\x18\x01 \x01(\x0b\x32\x13.edgify.GroundTruthJ\x04\x08\x02\x10\x03\"\x15\n\x13GroundTruthResponse\"\"\n GetCurrentModelDeploymentRequest\"V\n!GetCurrentModelDeploymentResponse\x12\x31\n\x10model_deployment\x18\x01 \x01(\x0b\x32\x17.edgify.ModelDeployment\"\x1e\n\x1cGetCurrentLookupTableRequest\"\xbb\x01\n\x1dGetCurrentLookupTableResponse\x12L\n\x0clookup_table\x18\x01 \x03(\x0b\x32\x36.edgify.GetCurrentLookupTableResponse.LookupTableEntry\x1aL\n\x10LookupTableEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\'\n\x05value\x18\x02 \x01(\x0b\x32\x18.edgify.LookupTableValue:\x02\x38\x01\x32\x85\x03\n\rEdgifyService\x12H\n\rGetPrediction\x12\x19.edgify.PredictionRequest\x1a\x1a.edgify.PredictionResponse\"\x00\x12N\n\x11\x43reateGroundTruth\x12\x1a.edgify.GroundTruthRequest\x1a\x1b.edgify.GroundTruthResponse\"\x00\x12r\n\x19GetCurrentModelDeployment\x12(.edgify.GetCurrentModelDeploymentRequest\x1a).edgify.GetCurrentModelDeploymentResponse\"\x00\x12\x66\n\x15GetCurrentLookupTable\x12$.edgify.GetCurrentLookupTableRequest\x1a%.edgify.GetCurrentLookupTableResponse\"\x00\x42\nZ\x08\x65\x64gifypbb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -169,6 +169,20 @@ _IMAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='device_id', full_name='edgify.Image.device_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='source', full_name='edgify.Image.source', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -182,7 +196,7 @@ _IMAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=288,
-  serialized_end=342,
+  serialized_end=377,
 )
 
 
@@ -248,8 +262,8 @@ _MODELDEPLOYMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=345,
-  serialized_end=499,
+  serialized_start=380,
+  serialized_end=534,
 )
 
 
@@ -294,8 +308,54 @@ _GROUNDTRUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=501,
-  serialized_end=585,
+  serialized_start=536,
+  serialized_end=620,
+)
+
+
+_LOOKUPTABLEVALUE = _descriptor.Descriptor(
+  name='LookupTableValue',
+  full_name='edgify.LookupTableValue',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='translated_name', full_name='edgify.LookupTableValue.translated_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='human_readable_name', full_name='edgify.LookupTableValue.human_readable_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='comment', full_name='edgify.LookupTableValue.comment', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=622,
+  serialized_end=711,
 )
 
 
@@ -321,13 +381,6 @@ _PREDICTIONREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source', full_name='edgify.PredictionRequest.source', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -340,8 +393,8 @@ _PREDICTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=587,
-  serialized_end=679,
+  serialized_start=713,
+  serialized_end=795,
 )
 
 
@@ -372,8 +425,8 @@ _PREDICTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=681,
-  serialized_end=741,
+  serialized_start=797,
+  serialized_end=857,
 )
 
 
@@ -392,13 +445,6 @@ _GROUNDTRUTHREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source', full_name='edgify.GroundTruthRequest.source', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -411,8 +457,8 @@ _GROUNDTRUTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=743,
-  serialized_end=822,
+  serialized_start=859,
+  serialized_end=928,
 )
 
 
@@ -436,8 +482,8 @@ _GROUNDTRUTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=824,
-  serialized_end=845,
+  serialized_start=930,
+  serialized_end=951,
 )
 
 
@@ -461,8 +507,8 @@ _GETCURRENTMODELDEPLOYMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=847,
-  serialized_end=881,
+  serialized_start=953,
+  serialized_end=987,
 )
 
 
@@ -493,8 +539,103 @@ _GETCURRENTMODELDEPLOYMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=883,
-  serialized_end=969,
+  serialized_start=989,
+  serialized_end=1075,
+)
+
+
+_GETCURRENTLOOKUPTABLEREQUEST = _descriptor.Descriptor(
+  name='GetCurrentLookupTableRequest',
+  full_name='edgify.GetCurrentLookupTableRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1077,
+  serialized_end=1107,
+)
+
+
+_GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY = _descriptor.Descriptor(
+  name='LookupTableEntry',
+  full_name='edgify.GetCurrentLookupTableResponse.LookupTableEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='edgify.GetCurrentLookupTableResponse.LookupTableEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='edgify.GetCurrentLookupTableResponse.LookupTableEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1221,
+  serialized_end=1297,
+)
+
+_GETCURRENTLOOKUPTABLERESPONSE = _descriptor.Descriptor(
+  name='GetCurrentLookupTableResponse',
+  full_name='edgify.GetCurrentLookupTableResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='lookup_table', full_name='edgify.GetCurrentLookupTableResponse.lookup_table', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1110,
+  serialized_end=1297,
 )
 
 _PREDICTION.fields_by_name['predictions'].message_type = _PREDICTIONITEM
@@ -505,17 +646,23 @@ _PREDICTIONREQUEST.fields_by_name['image'].message_type = _IMAGE
 _PREDICTIONRESPONSE.fields_by_name['prediction'].message_type = _PREDICTION
 _GROUNDTRUTHREQUEST.fields_by_name['ground_truth'].message_type = _GROUNDTRUTH
 _GETCURRENTMODELDEPLOYMENTRESPONSE.fields_by_name['model_deployment'].message_type = _MODELDEPLOYMENT
+_GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY.fields_by_name['value'].message_type = _LOOKUPTABLEVALUE
+_GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY.containing_type = _GETCURRENTLOOKUPTABLERESPONSE
+_GETCURRENTLOOKUPTABLERESPONSE.fields_by_name['lookup_table'].message_type = _GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY
 DESCRIPTOR.message_types_by_name['PredictionItem'] = _PREDICTIONITEM
 DESCRIPTOR.message_types_by_name['Prediction'] = _PREDICTION
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['ModelDeployment'] = _MODELDEPLOYMENT
 DESCRIPTOR.message_types_by_name['GroundTruth'] = _GROUNDTRUTH
+DESCRIPTOR.message_types_by_name['LookupTableValue'] = _LOOKUPTABLEVALUE
 DESCRIPTOR.message_types_by_name['PredictionRequest'] = _PREDICTIONREQUEST
 DESCRIPTOR.message_types_by_name['PredictionResponse'] = _PREDICTIONRESPONSE
 DESCRIPTOR.message_types_by_name['GroundTruthRequest'] = _GROUNDTRUTHREQUEST
 DESCRIPTOR.message_types_by_name['GroundTruthResponse'] = _GROUNDTRUTHRESPONSE
 DESCRIPTOR.message_types_by_name['GetCurrentModelDeploymentRequest'] = _GETCURRENTMODELDEPLOYMENTREQUEST
 DESCRIPTOR.message_types_by_name['GetCurrentModelDeploymentResponse'] = _GETCURRENTMODELDEPLOYMENTRESPONSE
+DESCRIPTOR.message_types_by_name['GetCurrentLookupTableRequest'] = _GETCURRENTLOOKUPTABLEREQUEST
+DESCRIPTOR.message_types_by_name['GetCurrentLookupTableResponse'] = _GETCURRENTLOOKUPTABLERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PredictionItem = _reflection.GeneratedProtocolMessageType('PredictionItem', (_message.Message,), {
@@ -552,6 +699,13 @@ GroundTruth = _reflection.GeneratedProtocolMessageType('GroundTruth', (_message.
   # @@protoc_insertion_point(class_scope:edgify.GroundTruth)
   })
 _sym_db.RegisterMessage(GroundTruth)
+
+LookupTableValue = _reflection.GeneratedProtocolMessageType('LookupTableValue', (_message.Message,), {
+  'DESCRIPTOR' : _LOOKUPTABLEVALUE,
+  '__module__' : 'prediction_pb2'
+  # @@protoc_insertion_point(class_scope:edgify.LookupTableValue)
+  })
+_sym_db.RegisterMessage(LookupTableValue)
 
 PredictionRequest = _reflection.GeneratedProtocolMessageType('PredictionRequest', (_message.Message,), {
   'DESCRIPTOR' : _PREDICTIONREQUEST,
@@ -595,8 +749,31 @@ GetCurrentModelDeploymentResponse = _reflection.GeneratedProtocolMessageType('Ge
   })
 _sym_db.RegisterMessage(GetCurrentModelDeploymentResponse)
 
+GetCurrentLookupTableRequest = _reflection.GeneratedProtocolMessageType('GetCurrentLookupTableRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETCURRENTLOOKUPTABLEREQUEST,
+  '__module__' : 'prediction_pb2'
+  # @@protoc_insertion_point(class_scope:edgify.GetCurrentLookupTableRequest)
+  })
+_sym_db.RegisterMessage(GetCurrentLookupTableRequest)
+
+GetCurrentLookupTableResponse = _reflection.GeneratedProtocolMessageType('GetCurrentLookupTableResponse', (_message.Message,), {
+
+  'LookupTableEntry' : _reflection.GeneratedProtocolMessageType('LookupTableEntry', (_message.Message,), {
+    'DESCRIPTOR' : _GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY,
+    '__module__' : 'prediction_pb2'
+    # @@protoc_insertion_point(class_scope:edgify.GetCurrentLookupTableResponse.LookupTableEntry)
+    })
+  ,
+  'DESCRIPTOR' : _GETCURRENTLOOKUPTABLERESPONSE,
+  '__module__' : 'prediction_pb2'
+  # @@protoc_insertion_point(class_scope:edgify.GetCurrentLookupTableResponse)
+  })
+_sym_db.RegisterMessage(GetCurrentLookupTableResponse)
+_sym_db.RegisterMessage(GetCurrentLookupTableResponse.LookupTableEntry)
+
 
 DESCRIPTOR._options = None
+_GETCURRENTLOOKUPTABLERESPONSE_LOOKUPTABLEENTRY._options = None
 
 _EDGIFYSERVICE = _descriptor.ServiceDescriptor(
   name='EdgifyService',
@@ -605,8 +782,8 @@ _EDGIFYSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=972,
-  serialized_end=1257,
+  serialized_start=1300,
+  serialized_end=1689,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPrediction',
@@ -635,6 +812,16 @@ _EDGIFYSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETCURRENTMODELDEPLOYMENTREQUEST,
     output_type=_GETCURRENTMODELDEPLOYMENTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetCurrentLookupTable',
+    full_name='edgify.EdgifyService.GetCurrentLookupTable',
+    index=3,
+    containing_service=None,
+    input_type=_GETCURRENTLOOKUPTABLEREQUEST,
+    output_type=_GETCURRENTLOOKUPTABLERESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

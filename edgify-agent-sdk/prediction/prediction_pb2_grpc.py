@@ -29,25 +29,57 @@ class EdgifyServiceStub(object):
                 request_serializer=prediction__pb2.GetCurrentModelDeploymentRequest.SerializeToString,
                 response_deserializer=prediction__pb2.GetCurrentModelDeploymentResponse.FromString,
                 )
+        self.GetCurrentLookupTable = channel.unary_unary(
+                '/edgify.EdgifyService/GetCurrentLookupTable',
+                request_serializer=prediction__pb2.GetCurrentLookupTableRequest.SerializeToString,
+                response_deserializer=prediction__pb2.GetCurrentLookupTableResponse.FromString,
+                )
 
 
 class EdgifyServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def GetPrediction(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """option (google.api.http) = {
+        get: "/api/v1/prediction"
+        additional_bindings {
+        		post: "/api/v1/prediction"
+        		body: "*"
+        	}
+        };
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateGroundTruth(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """option (google.api.http) = {
+        post: "/api/v1/predictions"
+        body: "*"
+        additional_bindings {
+        		post: "/api/v1/ground_truths"
+        		body: "*"
+        	}
+        };
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetCurrentModelDeployment(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """option (google.api.http) = {
+        get: "/api/v1/model_deployment"
+        };
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetCurrentLookupTable(self, request, context):
+        """option (google.api.http) = {
+        get: "/api/v1/lookup_table"
+        };
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -69,6 +101,11 @@ def add_EdgifyServiceServicer_to_server(servicer, server):
                     servicer.GetCurrentModelDeployment,
                     request_deserializer=prediction__pb2.GetCurrentModelDeploymentRequest.FromString,
                     response_serializer=prediction__pb2.GetCurrentModelDeploymentResponse.SerializeToString,
+            ),
+            'GetCurrentLookupTable': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetCurrentLookupTable,
+                    request_deserializer=prediction__pb2.GetCurrentLookupTableRequest.FromString,
+                    response_serializer=prediction__pb2.GetCurrentLookupTableResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -128,5 +165,22 @@ class EdgifyService(object):
         return grpc.experimental.unary_unary(request, target, '/edgify.EdgifyService/GetCurrentModelDeployment',
             prediction__pb2.GetCurrentModelDeploymentRequest.SerializeToString,
             prediction__pb2.GetCurrentModelDeploymentResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCurrentLookupTable(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/edgify.EdgifyService/GetCurrentLookupTable',
+            prediction__pb2.GetCurrentLookupTableRequest.SerializeToString,
+            prediction__pb2.GetCurrentLookupTableResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
